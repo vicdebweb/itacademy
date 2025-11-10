@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-family: sans-serif;
+  color: #000000;
+}
+
+/* Caja principal */
+.layout {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* Bloques principales (3) */
+.container {
+  background: #000000;
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+/* Filas Flex */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Cajas de contenido*/
+.box {
+  background: #e57373;
+  padding: 12px;
+  background:#e57373;
+  color:#000;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 2px;
+}
+
+/* Fila de la cabecera */
+.logo, .social { width: 120px; }
+.grow { flex: 1; }
+.banner{ background:#f6c453; }
+
+/* Columnas del bloque 2 */
+.left { flex: 1; }
+.right { width: 240px; }
+
+/* Panel .publicidad */
+.ads-panel{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background:#ef5350;
+  padding: 12px;
+  border-radius: 2px;
+}
+.ad{ background:#ffeb3b; }
+
+/* Flex y wrap para clase boxes */
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Articulos */
+.article{
+  flex: 1 1 calc(50% - 8px);
+  background:#5b8bd6;
+}
+
+/* Navegacion */
+.navegacion{
+  flex: 1 1 100%;
+  background:#8fb8e6;
+}
+
+/*Bloque de pie */
+.pie{ background:#f3ee8a; }
+
+/* ===== Version Responsive (tablet) (Media Query)===== */
+
+@media (max-width: 900px){
+
+  /* Bloque 1 se apila */
+  .container:first-of-type .row{
+    flex-direction: column;
+  }
+  .container:first-of-type .row .box{
+    width: 100%;
+  }
+
+  /* Bloque 2: publicidad pasa abajo */
+  .row{
+    flex-wrap: wrap;
+  }
+
+  .left{
+    order: 1;
+    width: 100%;
+  }
+
+  .right{
+    order: 2;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Panel .publicidad */
+  .ads-panel{
+    flex-direction: column;
+  }
+}
+
+/* ======== Version Resposive (movil) (Media Query) ======== */
+@media (max-width: 600px){
+
+  /* Fils a Columna */
+  .row{
+    flex-direction: column;
+  }
+
+  /* Articulos a columna */
+  .boxes{
+    flex-direction: column;
+  }
+  .article{
+    flex: 1 1 100%;
+  }
+
+  /* Ancho completo para navegacion */
+  .navegacion{
+    flex: 1 1 100%;
+  }
+
+  /* Panel .publicidad con ancho completo */
+  .right{
+    width: 100%;
+    order: 2;
+  }
+  .left{
+    width: 100%;
+    order: 1;
+  }
+}
