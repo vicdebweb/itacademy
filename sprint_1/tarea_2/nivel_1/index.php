@@ -34,11 +34,11 @@ $php = " Este es el curso de PHP";
 echo Hi, $php;
 ?>
 
-//Ejercicio 3:
+//Ejercicio 3, parte A:
 <?php
 
 $x = 2;
-$y = 4;
+$y = 4; 
 $n = 2.22;
 $m = 4.44;
 
@@ -61,4 +61,26 @@ echo 'Doble de M: ' . $m * 2 . "\n" . "\n";
 
 echo 'Suma de todas las variables: ' . $x + $y + $n + $m . "\n";
 echo 'Producto de todas las variables: ' . $x * $y * $n * $m . "\n";
+?>
+
+//Ejercicio 3, parte B:
+<?php
+
+function Calcular ($x, $y, $operacion){
+    if($operacion == "suma"){
+        echo $x + $y;
+    }
+    elseif ($operacion == "resta"){
+        echo $x - $y;
+    }
+    elseif ($operacion == "multiplicacion"){
+        echo $x * $y;
+    }
+    elseif ($operacion == "division"){
+        echo $x / $y;
+    }
+}
+
+Calcular (2, 8, "suma") . "\n";
+
 ?>
