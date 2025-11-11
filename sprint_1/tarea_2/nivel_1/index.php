@@ -94,3 +94,27 @@ while ($n <=30){ //Aquí cuenta hasta que la secuencia sea igual o menor que 30.
 	$n += 4; //Aquí cuenta de 4 en 4 números.
 }
 ?>
+
+
+/Ejercicio 5:
+<?php
+$valor = 50;
+
+$outputValue = match (true){
+    $valor <33  => "Reprobarás",
+    $valor <44  => "Tercera División",
+    $valor <59  => "Segunda División",
+    $valor <100 => "Primera División",
+}
+?>
+
+/Ejercicio 6:
+<?php
+$bite = rand(0, 1);
+
+if ($bite == 0) {
+    echo "Resultado A";
+} else {
+    echo "Resultado B";
+}
+?>
