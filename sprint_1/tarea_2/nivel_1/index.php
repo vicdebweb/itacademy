@@ -113,8 +113,8 @@ $outputValue = match (true){
 $bite = rand(0, 1);
 
 if ($bite == 0) {
-    echo "Resultado A";
+    echo "TRUE";
 } else {
-    echo "Resultado B";
+    echo "FALSE";
 }
 ?>
