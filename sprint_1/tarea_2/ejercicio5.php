@@ -1,10 +1,15 @@
 <?php
-$valor = 50;
 
-$outputValue = match (true){
-    $valor <33  => "Reprobarás",
-    $valor <44  => "Tercera División",
-    $valor <59  => "Segunda División",
-    $valor <100 => "Primera División",
+function verify($note)
+{
+    return match (true) {
+        $note < 33  => "Reprobarás",
+        $note < 45  => "Tercera División",
+        $note < 60  => "Segunda División",
+        $note >= 60 => "Primera División",
+    };
 }
+
+echo verify(50);
+
 ?>
