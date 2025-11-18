@@ -2,29 +2,29 @@
 
 class Employee {
 
-    public $name;
-    public $salary;
+    public string $name;
+    public float $salary;
 
-    // Método para definir parámetros (nombre / sueldo)
-    public function setData($name, $salary) {
-        $this->name = $name;
-        $this->salary = $salary;
-    }
+    // Método para definir parámetros (constructor)
+    public function __construct(string $name, float $salary) {
+    $this->name = $name;
+    $this->salary = $salary;
+}
+
 
     // Imprime nombre y mensaje (pagar o no)
     public function printInfo() {
         echo "Name: " . $this->name . "\n";
 
-        if ($this->salary > 6000) {
-            echo "No necesita pagar impuestos.";
+        if ($this->salary >= 6000) {
+            echo "Paga impuestos.";
         } else {
-            echo "Necesita pagar impuestos.";
+            echo "No necesita pagar impuestos.";
         }
     }
 }
 
-$employee = new Employee();
-$employee->setData("Laura", 5800);
+$employee = new Employee("Laura", 6001);
 $employee->printInfo();
 
 ?>
